@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Tetris</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="resources/style.css" />
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700");
+">
+</head>
+<body>
+	<div id="background" class="background" style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%;"></div>
+    <div id="mainContainer" class="mainContainer" style="overflow: hidden; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%;" >
+        <div id="gameContainer" style="position: fixed; left: 0px; top: 100px;"></div>
+    </div>
+	<div id="menuContainer" class="menuContainer" style="overflow: hidden; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%;"></div>
+	<div id="cloudContainer" class="clouds" style="overflow: hidden; position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;" ></div>
+	<div id="controlsContainer" class="controls" style="overflow: hidden; position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;" ></div>
+	<div id="splashContainer" style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%;)" ></div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script type="text/javascript" id="wasabiscript"></script>
+	<script type="text/javascript">
+		var useragent = navigator.userAgent;
+		var scripturl = "http://www.rounds.com/wasabi/get-latest/wasabi.js";
+
+		$("#wasabiscript").load(function() {
+			$("#tetrisscript").load(function() {
+				rounds.urls = {
+					wasabi: {
+						storage: null
+					}
+				};
+				var handleInit = function(params)
+				{
+					rounds.removeEvent("init", handleInit);
+					Tetris.init();
+				}
+				rounds.addEvent("init", handleInit);
+				rounds.init();
+			});
+			$("#tetrisscript").attr("src", "tetris.js");
+		});
+		$("#wasabiscript").attr("src", scripturl);
+	</script>
+	<script type="text/javascript" id="tetrisscript"></script>
+
+</body>
+</html>

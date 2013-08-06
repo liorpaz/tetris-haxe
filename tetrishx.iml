@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="HAXE_MODULE" version="4">
+  <component name="HaxeModuleSettingsStorage">
+    <option name="arguments" value="-lib feffects" />
+    <option name="haxeTarget" value="JavaScript" />
+    <option name="hxmlPath" value="$MODULE_DIR$/src/compile.hxml" />
+    <option name="mainClass" value="Tetris.hx" />
+    <option name="outputFileName" value="tetris.js" />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/js" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/js/resources" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/js" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="haXe 2.10" jdkType="haXe SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jQueryMobileExtern" level="application" />
+  </component>
+</module>
+

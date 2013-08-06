@@ -1,0 +1,14 @@
+-js ../js/tetris-mock.js
+-lib jQueryMobileExtern
+-lib jQueryExtern
+-lib feffects
+-D usemock
+-main Tetris
+
+--next
+
+-js ../js/tetris.js
+-lib jQueryMobileExtern
+-lib jQueryExtern
+-lib feffects
+-main Tetris

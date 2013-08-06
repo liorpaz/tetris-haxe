@@ -1,0 +1,9 @@
+## JavaScript
+-main TestMain
+-lib munit
+-lib hamcrest
+-cp src
+-cp test
+
+-cp test
+-js build/js_test.js
